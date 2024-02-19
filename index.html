@@ -20,6 +20,10 @@
       .font-raleway {
         font-family: "Raleway", sans-serif;
       }
+      body {
+        margin: 0;
+        padding: 0;
+      }
     </style>
   </head>
 
@@ -76,7 +80,7 @@
       </button>
     </nav>
     <!-- hero section -->
-    <div class="container mx-auto px-5 py-8">
+    <div class="container mx-auto px-5 py-10">
       <div
         class="hero min-h-[520px] bg-[url('./images/banner.png')] rounded-lg"
       >
@@ -95,13 +99,13 @@
           <button
             class="bg-[#1dd100] px-4 py-3 rounded-md font-semibold text-lg"
           >
-            Buy Tickets
+            <a href="#offer"> Buy Tickets</a>
           </button>
         </div>
       </div>
     </div>
     <!-- cupon section -->
-    <section class="container mx-auto px-5 py-8">
+    <section class="container mx-auto px-5 py-10">
       <h2 class="font-bold pb-10 text-center text-4xl font-raleway">
         Best offers for you
       </h2>
@@ -155,6 +159,88 @@
       </div>
     </section>
     <!-- poribohon section -->
+    <section
+      class="rounded-t-[88px] border-t-[#1DD100] border mt-10 py-10 bg-[#F7F8F8]"
+    >
+      <div class="container mx-auto px-5 font-raleway">
+        <h2
+          class="font-bold pb-4 text-center text-4xl font-raleway pt-20"
+          id="offer"
+        >
+          P.H Paribahan
+        </h2>
+        <p class="w-[50%] mx-auto text-center pb-10">
+          Yes, you can run unit tests and view the results directly within the
+          app. The integrated testing features allow for a streamlined .
+        </p>
+        <div class="flex gap-2 bg-white rounded-2xl">
+          <!-- left div -->
+
+          <div class="w-[75%] p-8">
+            <div class="flex gap-2 justify-between w-full">
+              <div class="flex gap-10 w-[60%]">
+                <img src="./images/bus-logo.png" alt="bus-logo" class="" />
+                <div>
+                  <h3 class="text-3xl font-bold mb-2">Greenline Paribahan</h3>
+                  <p class="text-base">Coach-009-WEB ! AC_Business</p>
+                </div>
+              </div>
+              <div
+                class="bg-[#1DD10026] rounded-md px-4 py-3 text-[#1DD100] flex gap-2 items-center"
+              >
+                <img src="./images/seat-green.png" alt="seat" />
+                <p class="text-[#1DD100] font-semibold">40 Seats left</p>
+              </div>
+            </div>
+            <div class="bg-[#F7F8F8] p-5 rounded-xl mt-5">
+              <div
+                class="flex justify-between border-b-2 border-dashed py-6 border-[#03071233]"
+              >
+                <p class="text-[#03071299]">Route</p>
+                <p class="font-semibold">Dhaka-Shylet</p>
+              </div>
+              <div
+                class="flex justify-between border-b-2 border-dashed py-6 font-semibold border-[#03071233]"
+              >
+                <p class="text-[#03071299]">Departure Time</p>
+                <p class="font-semibold">9:00 PM</p>
+              </div>
+              <div class="flex justify-between items-center mt-5">
+                <div class="bg-[#0307120D] rounded-xl p-5 text-center">
+                  <p class="font-semibold">Boarding Point - Laxmipur</p>
+                </div>
+                <div class="bg-[#0307120D] rounded-xl p-5 text-center">
+                  <p class="font-semibold">Dropping Point - Bogura</p>
+                </div>
+                <div class="bg-[#0307120D] rounded-xl p-5 text-center">
+                  <p class="font-semibold">Est. Time - 11 Hour</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- midddle icon -->
+          <div class="w-[5%]">
+            <img
+              src="./images/info-devider.png"
+              alt="driver"
+              class="h-full object-cover"
+            />
+          </div>
+          <!-- right div -->
+          <div class="w-[20%] p-8 flex items-center justify-center">
+            <div class="flex flex-col gap-5 items-center justify-center">
+              <img src="./images/fare.png" alt="fare" class="w-10 h-10" />
+              <p
+                class="font-raleway font-semibold text-xl text-gray-600 text-center"
+              >
+                <span class="text-black text-2xl">550 Taka</span> <br />Per Seat
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <script src="./app.js"></script>
   </body>
