@@ -24,6 +24,7 @@
         margin: 0;
         padding: 0;
       }
+      
     </style>
   </head>
 
@@ -189,7 +190,7 @@
                 class="bg-[#1DD10026] rounded-md px-4 py-3 text-[#1DD100] flex gap-2 items-center"
               >
                 <img src="./images/seat-green.png" alt="seat" />
-                <p class="text-[#1DD100] font-semibold">40 Seats left</p>
+                <p class="text-[#1DD100] font-semibold"> <span id="total-seat">40</span> Seats left</p>
               </div>
             </div>
             <div class="bg-[#F7F8F8] p-5 rounded-xl mt-5">
@@ -270,22 +271,22 @@
               </div>
               <div class="mt-5">
                 <div class="flex gap-2 items-center w-full pb-8">
-                    <div class=" text-center rounded-md w-[10%]">
+                    <div class=" text-center rounded-md w-[10%] t-btn">
                         <p class="py-2">A</p>
                       </div>
                     <div class="grid grid-cols-4 gap-10 font-mono w-[90%]">
-                        <div class="bg-[#F7F8F8] text-center rounded-md">
+                        <button class="bg-[#F7F8F8] text-center rounded-md t-btn">
                           <p class="py-2">A1</p>
-                        </div>
-                        <div class="bg-[#F7F8F8] text-center rounded-md">
+                        </button>
+                        <button class="bg-[#F7F8F8] text-center rounded-md t-btn">
                           <p class="py-2">A2</p>
-                        </div>
-                        <div class="bg-[#F7F8F8] text-center rounded-md">
+                        </button>
+                        <button class="bg-[#F7F8F8] text-center rounded-md t-btn">
                           <p class="py-2">A3</p>
-                        </div>
-                        <div class="bg-[#F7F8F8] text-center rounded-md">
+                        </button>
+                        <button class="bg-[#F7F8F8] text-center rounded-md t-btn">
                           <p class="py-2">A4</p>
-                        </div>
+                        </button>
                       </div>
                 </div>
                 <div class="flex gap-2 items-center w-full pb-8">
@@ -293,18 +294,18 @@
                         <p class="py-2">B</p>
                       </div>
                     <div class="grid grid-cols-4 gap-10 font-mono w-[90%]">
-                        <div class="bg-[#F7F8F8] text-center rounded-md">
+                        <button class="bg-[#F7F8F8] text-center rounded-md t-btn">
                           <p class="py-2">B1</p>
-                        </div>
-                        <div class="bg-[#F7F8F8] text-center rounded-md">
+                        </button>
+                        <button class="bg-[#F7F8F8] text-center rounded-md t-btn">
                           <p class="py-2">B2</p>
-                        </div>
-                        <div class="bg-[#F7F8F8] text-center rounded-md">
+                        </button>
+                        <button class="bg-[#F7F8F8] text-center rounded-md t-btn">
                           <p class="py-2">B3</p>
-                        </div>
-                        <div class="bg-[#F7F8F8] text-center rounded-md">
+                        </button>
+                        <button class="bg-[#F7F8F8] text-center rounded-md t-btn">
                           <p class="py-2">B4</p>
-                        </div>
+                        </button>
                       </div>
                 </div>
                 <div class="flex gap-2 items-center w-full pb-8">
@@ -360,36 +361,33 @@
                 <div
                   class="flex justify-between border-b-2 border-dashed pb-5 border-[#03071233]"
                 >
-                  <p class="font-semibold">seat <span>2</span></p>
+                  <p class="font-semibold">seat <span id="buy-seats" class="bg-[#1DD100] font-semibold px-2 rounded-md text-white text-xs">0</span></p>
                   <p class="font-semibold">class</p>
                   <p class="font-semibold">price</p>
                 </div>
                 <div
                   class="childern-div pt-3 border-b-2 pb-5 border-[#03071233]"
                 >
-                  <div class="flex justify-between pb-3">
-                    <p class="font-semibold text-[#03071299]">c2</p>
-                    <p class="font-semibold text-[#03071299]">economy</p>
-                    <p class="font-semibold text-[#03071299]">550</p>
-                  </div>
-                  <div class="flex justify-between pb-3">
-                    <p class="font-semibold text-[#03071299]">c2</p>
-                    <p class="font-semibold text-[#03071299]">economy</p>
-                    <p class="font-semibold text-[#03071299]">550</p>
-                  </div>
+                  
                 </div>
-                <div class="flex justify-between py-4">
-                  <p class="text-[#03071299]">Grand Total</p>
-                  <p class="font-semibold">1100</p>
-                </div>
+                <div class="justify-between py-4 hidden total-box" >
+                    <p class="text-[#03071299]">Discount</p>
+                    <p class="font-semibold" id="discount-value">0</p>
+                  </div>
+                    <div class="flex justify-between py-4">
+                        <p class="text-[#03071299]">Grand Total</p>
+                        <p class="font-semibold" id="grand_Total">0</p>
+                      </div>
                 <!-- cupon -->
-                <div class="relative">
+                <div class="relative" id="cuppon-box">
                   <input
+                  id="cuppon-input"
                     type="text"
                     placeholder="Have any cuppon "
                     class="px-3 py-4 rounded-lg outline-none border-none bg-white w-full"
                   />
                   <button
+                  id="cupponBtn"
                     class="bg-[#1DD100] capitalize px-3 py-2 rounded-lg absolute right-2 top-2 font-semibold text-white"
                   >
                     apply
