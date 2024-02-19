@@ -24,7 +24,9 @@
         margin: 0;
         padding: 0;
       }
-      
+      html {
+      scroll-behavior: smooth;
+    }
     </style>
   </head>
 
@@ -82,35 +84,29 @@
     </nav>
     <!-- hero section -->
     <div class="container mx-auto px-5 py-10">
-      <div
-        class="hero min-h-[520px] bg-[url('./images/banner.png')] rounded-lg"
-      >
-        <div class="hero-overlay bg-opacity-10"></div>
-        <div class="text-center">
-          <h1
-            class="text-5xl font-bold w-[550px] mx-auto text-white leading-[60px] mb-5"
-          >
-            End-to-End Travel with
-            <span class="text-[#1dd100]">P Paribahan</span>
-          </h1>
-          <p class="mb-5 w-[650px] mx-auto text-white">
-            Yes, you can run unit tests and view the results directly within the
-            app. The integrated testing features allow for a streamlined
-          </p>
-          <button
-            class="bg-[#1dd100] px-4 py-3 rounded-md font-semibold text-lg"
-          >
-            <a href="#offer"> Buy Tickets</a>
-          </button>
-        </div>
-      </div>
+        <div class="hero min-h-[520px] bg-[url('./images/banner.png')] rounded-lg">
+            <div class="hero-overlay bg-opacity-10"></div>
+            <div class="text-center">
+              <h1 class="w-full lg:w-[70%] text-4xl md:text-5xl lg:text-6xl font-bold mx-auto text-white leading-[60px] mb-3 md:mb-5 lg:mb-7">
+                End-to-End Travel with <span class="text-[#1dd100]">P Paribahan</span>
+              </h1>
+              <p class="mb-3 md:mb-5 lg:mb-7 mx-4 md:mx-auto lg:mx-auto max-w-[650px] text-white">
+                Yes, you can run unit tests and view the results directly within the app.
+                The integrated testing features allow for a streamlined
+              </p>
+              <button class="bg-[#1dd100] px-4 py-3 rounded-md font-semibold text-lg">
+                <a href="#offer">Buy Tickets</a>
+              </button>
+            </div>
+          </div>
+          
     </div>
     <!-- cupon section -->
     <section class="container mx-auto px-5 py-10">
       <h2 class="font-bold pb-10 text-center text-4xl font-raleway">
         Best offers for you
       </h2>
-      <div class="gap-8 w-full grid grid-cols-2 mt-5">
+      <div class="gap-8 w-full grid lg:grid-cols-2 mt-5 grid-cols-1">
         <div class="bg-[#FFBF0F] rounded-2xl flex w-full justify-between">
           <div class="flex flex-col items-center justify-center w-[50%]">
             <h3 class="text-5xl font-bold mb-2">15% OFF</h3>
@@ -149,7 +145,7 @@
           </div>
         </div>
       </div>
-      <div class="mx-auto w-1/3 mt-10 flex items-center justify-center">
+      <div class="mx-auto lg:w-1/3 mt-10 flex items-center justify-center w-[70%]">
         <button
           class="px-5 py-3 rounded-lg capitalize font-raleway border border-[#1dd100] flex justify-between gap-2 items-center"
         >
@@ -174,12 +170,12 @@
           Yes, you can run unit tests and view the results directly within the
           app. The integrated testing features allow for a streamlined .
         </p>
-        <div class="flex gap-2 bg-white rounded-2xl">
+        <div class="flex gap-2 bg-white rounded-2xl lg:flex-row flex-col">
           <!-- left div -->
 
-          <div class="w-[75%] p-8">
-            <div class="flex gap-2 justify-between w-full">
-              <div class="flex gap-10 w-[60%]">
+          <div class="w-full lg:w-[75%] p-8">
+            <div class="flex gap-8 lg:gap-2 justify-between w-full lg:flex-row flex-col">
+              <div class="flex gap-10 lg:w-[60%] w-full">
                 <img src="./images/bus-logo.png" alt="bus-logo" class="" />
                 <div>
                   <h3 class="text-3xl font-bold mb-2">Greenline Paribahan</h3>
@@ -190,7 +186,7 @@
                 class="bg-[#1DD10026] rounded-md px-4 py-3 text-[#1DD100] flex gap-2 items-center"
               >
                 <img src="./images/seat-green.png" alt="seat" />
-                <p class="text-[#1DD100] font-semibold"> <span id="total-seat">40</span> Seats left</p>
+                <p class="text-[#1DD100] font-semibold font-sans"> <span id="total-seat">40</span> Seats left</p>
               </div>
             </div>
             <div class="bg-[#F7F8F8] p-5 rounded-xl mt-5">
@@ -206,14 +202,14 @@
                 <p class="text-[#03071299]">Departure Time</p>
                 <p class="font-semibold">9:00 PM</p>
               </div>
-              <div class="flex justify-between items-center mt-5">
-                <div class="bg-[#0307120D] rounded-xl p-5 text-center">
+              <div class="flex justify-between items-center mt-5 flex-wrap gap-6 lg:gap-0">
+                <div class="bg-[#0307120D] rounded-xl p-5 text-center w-full lg:w-fit">
                   <p class="font-semibold">Boarding Point - Laxmipur</p>
                 </div>
-                <div class="bg-[#0307120D] rounded-xl p-5 text-center">
+                <div class="bg-[#0307120D] rounded-xl p-5 text-center w-full lg:w-fit">
                   <p class="font-semibold">Dropping Point - Bogura</p>
                 </div>
-                <div class="bg-[#0307120D] rounded-xl p-5 text-center">
+                <div class="bg-[#0307120D] rounded-xl p-5 text-center w-full lg:w-fit">
                   <p class="font-semibold">Est. Time - 11 Hour</p>
                 </div>
               </div>
@@ -221,7 +217,7 @@
           </div>
 
           <!-- midddle icon -->
-          <div class="w-[5%]">
+          <div class="w-[5%] lg:flex hidden">
             <img
               src="./images/info-devider.png"
               alt="driver"
@@ -229,7 +225,7 @@
             />
           </div>
           <!-- right div -->
-          <div class="w-[20%] p-8 flex items-center justify-center">
+          <div class="w-full lg:w-[20%] p-8 flex items-center justify-center">
             <div class="flex flex-col gap-5 items-center justify-center">
               <img src="./images/fare.png" alt="fare" class="w-10 h-10" />
               <p
@@ -242,9 +238,9 @@
         </div>
         <!-- down section -->
         <div class="p-5 rounded-xl mt-5 bg-white"">
-          <div class="flex gap-10">
+          <div class="flex gap-10 lg:flex-row flex-col">
             <!-- left -->
-            <div class="w-[50%]">
+            <div class="lg:w-[50%] w-full">
               <h3
                 class="border-b-2 border-dashed py-6 text-2xl font-bold border-[#03071233]"
               >
@@ -313,18 +309,18 @@
                         <p class="py-2">C</p>
                       </div>
                     <div class="grid grid-cols-4 gap-10 font-mono w-[90%]">
-                        <div class="bg-[#F7F8F8] text-center rounded-md">
+                        <button class="bg-[#F7F8F8] text-center rounded-md t-btn">
                           <p class="py-2">C1</p>
-                        </div>
-                        <div class="bg-[#F7F8F8] text-center rounded-md">
+                        </button>
+                        <button class="bg-[#F7F8F8] text-center rounded-md t-btn">
                           <p class="py-2">C2</p>
-                        </div>
-                        <div class="bg-[#F7F8F8] text-center rounded-md">
+                        </button>
+                        <button class="bg-[#F7F8F8] text-center rounded-md t-btn">
                           <p class="py-2">C3</p>
-                        </div>
-                        <div class="bg-[#F7F8F8] text-center rounded-md">
+                        </button>
+                        <button class="bg-[#F7F8F8] text-center rounded-md t-btn">
                           <p class="py-2">C4</p>
-                        </div>
+                        </button>
                       </div>
                 </div>
                 <div class="flex gap-2 items-center w-full pb-8">
@@ -332,25 +328,25 @@
                         <p class="py-2">D</p>
                       </div>
                     <div class="grid grid-cols-4 gap-10 font-mono w-[90%]">
-                        <div class="bg-[#F7F8F8] text-center rounded-md">
+                        <button class="bg-[#F7F8F8] text-center rounded-md t-btn">
                           <p class="py-2">D1</p>
-                        </div>
-                        <div class="bg-[#F7F8F8] text-center rounded-md">
+                        </button>
+                        <button class="bg-[#F7F8F8] text-center rounded-md t-btn">
                           <p class="py-2">D2</p>
-                        </div>
-                        <div class="bg-[#F7F8F8] text-center rounded-md">
+                        </button>
+                        <button class="bg-[#F7F8F8] text-center rounded-md t-btn">
                           <p class="py-2">D3</p>
-                        </div>
-                        <div class="bg-[#F7F8F8] text-center rounded-md">
+                        </button>
+                        <button class="bg-[#F7F8F8] text-center rounded-md t-btn">
                           <p class="py-2">D4</p>
-                        </div>
+                        </button>
                       </div>
                 </div>
               </div>
             </div>
             <!-- right -->
             <div
-              class="w-[45%] border-l-2 border-dashed px-5 border-[#03071233]"
+              class="w-full lg:w-[45%] border-l-2 border-dashed px-5 border-[#03071233]"
             >
               <h3
                 class="border-b-2 border-dashed py-6 text-2xl font-bold border-[#03071233] w-full"
@@ -404,12 +400,38 @@
           </div>
         </div>
       </div>
-      <!-- Open the modal using ID.showModal() method -->
+      
     </section>
-<!-- The button to open modal -->
- 
 
-<!-- Put this part before </body> tag -->
+    <footer class="bg-black">
+       <div class="container mx-auto px-5 py-10">
+          <div class="flex justify-between border-b-2 border-dashed border-b-gray-400 py-10 lg:flex-row flex-col gap-8 lg:gap-0">
+            <div class="lg:w-[30%] w-full">
+                <p class="text-white font-bold text-3xl pb-3">P-Ticket</p>
+                <p class="text-gray-300">P-Ticket is a digital platform to make your daily commuting better.</p>
+            </div>
+            <div class="lg:w-[25%] w-full">
+                <p class="text-white font-semibold text-lg pb-2">Download our app</p>
+                 <div class="flex gap-10 px-5 py-3 border border-gray-400 rounded-lg ">
+                    <img src="./images/playstore.png" alt="playstore" class="w-[20%]">
+                    <div class="text-2xl text-white font-raleway font-bold">
+                        <p class="">Get it on</p>
+                        <p>Google Play</p>
+                    </div>
+                 </div>
+            </div>
+          </div>
+          <div class="flex py-5 gap-4 text-gray-300 justify-between lg:flex-row flex-col">
+             <p>@all rights reserved, P-Ticket services limited.2024</p>
+             <div class="flex gap-5">
+                <p>Terms & condition</p>
+                <p>Return & refund policy</p>
+                <p>Privacy policy</p>
+             </div>
+          </div>
+       </div>
+    </footer>
+
 <input type="checkbox" id="my_modal_7" class="modal-toggle" />
 <div class="modal" role="dialog">
   <div class="modal-box  text-center w-full">
@@ -424,6 +446,7 @@
   </div>
   <label class="modal-backdrop" for="my_modal_7">Close</label>
 </div>
+
     <script src="./app.js"></script>
   </body>
 </html>
