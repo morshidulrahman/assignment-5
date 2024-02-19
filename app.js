@@ -1,5 +1,14 @@
 const allbtns = document.querySelectorAll(".t-btn");
-let count = 0;
+let buyticket = document.querySelector("#buy-seats").innerText;
+const btnmodal = document.querySelector("#btn-modal");
+
+btnmodal.addEventListener("click", function () {
+  if (parseInt(buyticket) <= 0) {
+    alert("please buying any tickets");
+    return;
+  }
+});
+
 for (const key of allbtns) {
   key.addEventListener("click", function (e) {
     const ticketprice = 550;
@@ -12,6 +21,8 @@ for (const key of allbtns) {
     // purcase seat
     const buyingSeat = document.querySelector("#buy-seats").innerText;
     const convertedSeat = parseInt(buyingSeat) + 1;
+
+    buyticket = convertedSeat;
 
     if (convertedSeat > 4) {
       alert("you have bought ticket only four");
