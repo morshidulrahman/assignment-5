@@ -393,18 +393,37 @@
                     apply
                   </button>
                 </div>
-                <button
-                  class="bg-[#1DD100] text-white font-semibold py-4 rounded-xl w-full text-center mt-5"
+                <label
+                  for="my_modal_7" 
+                  class="bg-[#1DD100] text-white font-semibold py-4 rounded-xl w-full text-center mt-5 block "
                 >
                   Next
-                </button>
+                </label>
               </div>
             </div>
           </div>
         </div>
       </div>
+      <!-- Open the modal using ID.showModal() method -->
     </section>
+<!-- The button to open modal -->
+ 
 
+<!-- Put this part before </body> tag -->
+<input type="checkbox" id="my_modal_7" class="modal-toggle" />
+<div class="modal" role="dialog">
+  <div class="modal-box  text-center w-full">
+     <img src="./images/success.png" alt="success" class="mx-auto">
+     <p class="text-[#1DD100] font-bold py-5 text-3xl">success</p>
+     <p class="pb-3 font-semibold text-xl">Thank you for Booking Our Bus Seats. 
+        We are working hard to find the best service and deals for you.</p>
+        <p class="pb-4 text-xl">Shortly you will find a confirmation in your email.</p>
+        <label 
+        for="my_modal_7"
+        class="modal-backdrop bg-[#1DD100] text-white text-center w-[30%] mx-auto rounded-lg py-5 font-semibold text-lg">continue</label>
+  </div>
+  <label class="modal-backdrop" for="my_modal_7">Close</label>
+</div>
     <script src="./app.js"></script>
   </body>
 </html>

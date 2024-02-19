@@ -44,6 +44,7 @@ const grandTotal = document.querySelector("#grand_Total");
 const Total_box = document.querySelector(".total-box");
 const Discount_price = document.querySelector("#discount-value");
 const Cuppon_box = document.querySelector("#cuppon-box");
+const modal_Box = document.querySelector(".modal-box");
 
 cupponbtn.addEventListener("click", function () {
   let convertedGrandTotal = parseInt(grandTotal.innerText);
@@ -55,10 +56,22 @@ cupponbtn.addEventListener("click", function () {
     Total_box.classList.remove("hidden");
     Total_box.classList.add("flex");
     Cuppon_box.classList.add("hidden");
+  } else if (cupponValue.value === "Couple 20") {
+    DiscountTotal = (convertedGrandTotal * 20) / 100;
+    convertedGrandTotal = convertedGrandTotal - DiscountTotal;
+    Discount_price.innerText = DiscountTotal;
+    grandTotal.innerText = convertedGrandTotal;
+    Total_box.classList.remove("hidden");
+    Total_box.classList.add("flex");
+    Cuppon_box.classList.add("hidden");
+  } else if (cupponValue.value === "") {
+    alert("please select a seat then use cuppon");
   } else {
-    console.log(cupponValue);
+    alert("you inputed wrong cuppon");
   }
 });
+
+modal_Box.addEventListener("click", function (e) {});
 
 function setInnerText(id, value) {
   document.getElementById(id).innerText = value;
